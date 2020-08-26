@@ -31,7 +31,8 @@ attr_accessor :total, :discount, :items, :transactions
   end
 
   def void_last_transaction
-    items == nil ? 0.0 : self.total - self.transactions.pop
+    puts @transactions
+    # items == nil ? 0.0 : self.total - self.transactions.pop
   end
 
 end
