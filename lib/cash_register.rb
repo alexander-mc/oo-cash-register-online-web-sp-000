@@ -32,13 +32,11 @@ attr_accessor :total, :discount, :items, :transactions
   end
 
   def void_last_transaction
-
     self.total -= self.transactions.pop
-
   end
 
 end
 
-register = CashRegister.new
-register.add_item("tomato",1.76,2)
-puts register.void_last_transaction
+# register = CashRegister.new
+# register.add_item("tomato",1.76,2)
+# puts register.void_last_transaction
