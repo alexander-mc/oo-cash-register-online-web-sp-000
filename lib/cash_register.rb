@@ -15,4 +15,4 @@ attr_accessor :total, :discount
 end
 
 register = CashRegister.new
-puts register.add_item("beans",5.1, 5)
+puts register.add_item("beans",5.1)
