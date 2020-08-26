@@ -17,6 +17,7 @@ attr_accessor :total, :discount
     else
       self.total *= (1 - (self.discount * 0.01))
       "After the discount, the total comes to $#{self.total}."
+    end
   end
 
 end
