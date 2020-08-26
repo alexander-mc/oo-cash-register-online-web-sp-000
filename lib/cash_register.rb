@@ -6,11 +6,11 @@ attr_accessor :total, :discount, :items, :last_transaction
     @total = 0
     @discount = discount
     @items = []
-    @last_transaction = []
+    @last_transaction = 0.0
   end
   
   def add_item(title, price, quantity = 1)
-    self.last_transaction << price
+    self.last_transaction = price
     self.total += price * quantity
     
     i = 0
