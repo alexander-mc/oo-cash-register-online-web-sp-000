@@ -11,12 +11,12 @@ attr_accessor :total, :discount, :items, :transactions
   
   def add_item(title, price, quantity = 1)
 
+    self.transactions << price * quantity
     self.total += price * quantity
-    
+
     i = 0
     while i < quantity
       self.items << title  
-      self.transactions << price
       i += 1
     end
     
@@ -36,9 +36,7 @@ attr_accessor :total, :discount, :items, :transactions
     if self.transactions == []
       0.0
     else
-      voided_item = self.items.pop    
-      voided_trasaction = self.transactions.pop
-      self.total -= voided_trasaction
+      self.total -= self.transactions.pop
     end
     
   end
