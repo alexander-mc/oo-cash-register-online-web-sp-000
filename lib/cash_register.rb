@@ -38,7 +38,7 @@ attr_accessor :total, :discount, :items, :last_transaction
     if self.transactions.count == 0 || self.transactions.count == nil
       0.0
     else
-      self.total -= self.last_transaction
+      self.total -= self.voided_transaction
     end
   end
 
