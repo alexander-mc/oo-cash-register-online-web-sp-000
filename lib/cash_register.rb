@@ -38,7 +38,7 @@ attr_accessor :total, :discount, :items, :transactions
     else
       voided_item = self.items.pop      
       self.total -= self.transactions.pop
-      puts self.items
+      puts self.items.pop
       puts self.transactions
     end
     
