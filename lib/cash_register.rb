@@ -10,7 +10,7 @@ attr_accessor :total, :discount, :items
   
   def add_item(title, price, quantity = 1)
     self.total += price * quantity
-    
+    @items << title
   end
 
   def apply_discount
@@ -22,13 +22,9 @@ attr_accessor :total, :discount, :items
     end
   end
 
-  def items
-    
-  end
-
 end
 
 register = CashRegister.new(20)
 register.add_item("beans",5.1)
 register.add_item("beans",2.0 * 2.0)
-puts register.apply_discount
+puts register.items
