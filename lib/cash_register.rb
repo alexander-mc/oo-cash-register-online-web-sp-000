@@ -6,16 +6,17 @@ attr_accessor :total, :discount, :items, :last_transaction
     @total = 0
     @discount = discount
     @items = []
-    @last_transaction = 0.0
+    @transactions = []
   end
   
   def add_item(title, price, quantity = 1)
-    self.last_transaction = price
+
     self.total += price * quantity
     
     i = 0
     while i < quantity
       self.items << title  
+      self.transactions << price
       i += 1
     end
     
@@ -31,7 +32,10 @@ attr_accessor :total, :discount, :items, :last_transaction
   end
 
   def void_last_transaction
-    if self.items == [] || self.items.count == 1
+    voided_transaction = self.transactions.pop
+    voided_item = self.items.pop
+    
+    if self.transactions.count == 0 || self.transactions.count == nil
       0.0
     else
       self.total -= self.last_transaction
