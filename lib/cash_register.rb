@@ -39,5 +39,5 @@ end
 
 register = CashRegister.new(20)
 register.add_item("beans",5.1)
-puts register.add_item("beans",2.0 * 2.0)
+register.add_item("beans",2.0 * 2.0)
 puts register.void_last_transaction
