@@ -34,7 +34,7 @@ attr_accessor :total, :discount, :items, :last_transaction
     if items == nil
       0.0
     else
-      self.total - self.transactions.pop
+      self.total - self.last_transaction
     end
   end
 
