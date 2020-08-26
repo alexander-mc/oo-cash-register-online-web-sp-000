@@ -32,14 +32,14 @@ attr_accessor :total, :discount, :items, :last_transaction
   end
 
   def void_last_transaction
-    voided_transaction = self.transactions.pop
-    voided_item = self.items.pop
-    
-    if self.transactions.count == 0 || self.transactions.count == nil
+
+    if self.transactions == []
       0.0
     else
-      self.total -= self.voided_transaction
+      voided_item = self.items.pop      
+      self.total -= self.transactions.pop
     end
+    
   end
 
 end
