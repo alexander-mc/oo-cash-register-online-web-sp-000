@@ -11,6 +11,10 @@ attr_accessor :total, :discount
     self.total += price * quantity
   end
 
+  def apply_discount
+    
+  end
+
 end
 
 register = CashRegister.new
