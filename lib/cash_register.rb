@@ -12,7 +12,7 @@ attr_accessor :total, :discount
   end
 
   def apply_discount
-    
+    self.total *= (1 - (self.discount * .01))
   end
 
 end
