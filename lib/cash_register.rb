@@ -28,6 +28,10 @@ attr_accessor :total, :discount, :items
     end
   end
 
+  def void_last_transaction
+    
+  end
+
 end
 
 register = CashRegister.new(20)
