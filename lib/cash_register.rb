@@ -38,6 +38,8 @@ attr_accessor :total, :discount, :items, :transactions
     else
       voided_item = self.items.pop      
       self.total -= self.transactions.pop
+      puts self.items
+      puts self.transactions
     end
     
   end
@@ -47,5 +49,4 @@ end
 register = CashRegister.new
 register.add_item("beans",5.1)
 register.add_item("beans",2.0, 2)
-puts register.total
-# puts register.void_last_transaction
+register.void_last_transaction
