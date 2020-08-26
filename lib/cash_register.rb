@@ -9,6 +9,10 @@ attr_accessor :total, :discount
   
   def add_item(title, price, quantity = nil)
     
+    
   end
 
 end
+
+register = CashRegister.new
+register.add_item("beans",5.1, 5)
