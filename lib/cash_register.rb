@@ -10,7 +10,8 @@ attr_accessor :total, :discount, :items
   
   def add_item(title, price, quantity = 1)
     self.total += price * quantity
-    @items << title
+    quantity = 1 ? @items << title : @items << title * quantity
+    
   end
 
   def apply_discount
