@@ -33,12 +33,8 @@ attr_accessor :total, :discount, :items, :transactions
 
   def void_last_transaction
 
-    if self.transactions == []
-      0.0
-    else
-      self.total -= self.transactions.pop
-    end
-    
+    self.total -= self.transactions.pop
+
   end
 
 end
