@@ -45,4 +45,4 @@ end
 
 register = CashRegister.new
 register.add_item("tomato",1.76,2)
-register.void_last_transaction
+puts register.void_last_transaction
