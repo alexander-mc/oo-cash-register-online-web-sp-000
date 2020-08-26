@@ -7,12 +7,12 @@ attr_accessor :total, :discount
     @discount = discount
   end
   
-  def add_item(title, price, *quantity)
-    self.total += price*quantity
+  def add_item(title, price, quantity = nil)
+    self.total += price + quantity
     
   end
 
 end
 
 register = CashRegister.new
-puts register.add_item("beans",5)
+puts register.add_item("beans",5.0)
