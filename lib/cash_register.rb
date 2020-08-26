@@ -47,4 +47,5 @@ end
 register = CashRegister.new
 register.add_item("beans",5.1)
 register.add_item("beans",2.0, 2)
-puts register.void_last_transaction
+puts register.total
+# puts register.void_last_transaction
