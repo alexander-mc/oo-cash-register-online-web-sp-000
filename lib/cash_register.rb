@@ -13,7 +13,7 @@ attr_accessor :total, :discount
 
   def apply_discount
     if self.discount == 0
-      
+      "There is no discount to apply."
     else
       self.total *= (1 - (self.discount * 0.01))
   end
