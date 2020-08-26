@@ -21,7 +21,7 @@ attr_accessor :total, :discount
 
 end
 
-register = CashRegister.new
+register = CashRegister.new(20)
 register.add_item("beans",5.1)
 register.add_item("beans",2.0 * 2.0)
 puts register.apply_discount
